@@ -1,0 +1,14 @@
+[package]
+name = "Day3-Curl-Rust"
+version = "0.1.0"
+authors = ["JimReal <liulijng@bupt.edu.cn>"]
+edition = "2018"
+license = "MIT"
+description = "This crates are for request a html and transfer it into markdown"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = {version = "0.11", features = ["blocking"]}
+html2md = "0.2.13"
+rand = "0.8.4"
