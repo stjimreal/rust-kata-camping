@@ -3,10 +3,6 @@
 members = [
     "Day1-Memory-In-Stack-Or-Heap/getting-started",
     "Day3-Curl-Rust",
-    "basic-syntax",
-    "mod-macro",
-    "collections",
-    "box-rfcell-rc",
-    "async-locker"
+    "day4_get_hands_on_cli"
 ]
 

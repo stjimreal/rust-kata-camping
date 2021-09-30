@@ -1,0 +1,17 @@
+[package]
+name = "day4_get_hands_on_cli"
+version = "0.1.0"
+authors = ["JimReal <liulijng@bupt.edu.cn>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = {version = "0.11", features = ["json"]} # HTTP 客户端
+clap = "3.0.0-beta.4"
+colored = "2.0.0"
+anyhow = "1"
+jsonxf = "1.1"
+syntect = "4.6.0"
+mime = "0.3"
+tokio = {version = "1", features = ["full"]} # 异步处理库
