@@ -1,8 +1,8 @@
 [workspace]
 
 members = [
-    "Day1-Memory-In-Stack-Or-Heap/getting-started",
-    "Day3-Curl-Rust",
+    "day1_memory_in_stack_or_heap/getting-started",
+    "day3_curl_rust",
     "day4_get_hands_on_cli"
 ]
 

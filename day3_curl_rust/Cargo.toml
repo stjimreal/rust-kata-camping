@@ -1,5 +1,5 @@
 [package]
-name = "Day3-Curl-Rust"
+name = "day3_curl_rust"
 version = "0.1.0"
 authors = ["JimReal <liulijng@bupt.edu.cn>"]
 edition = "2018"
