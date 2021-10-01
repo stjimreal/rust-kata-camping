@@ -3,6 +3,7 @@
 members = [
     "day1_memory_in_stack_or_heap/getting-started",
     "day3_curl_rust",
-    "day4_get_hands_on_cli"
+    "day4_get_hands_on_cli",
+    "day5_picture_server"
 ]
 

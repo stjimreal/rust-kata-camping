@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-09-29 17:27:13
  * @LastEditors: LIULIJING
- * @LastEditTime: 2021-09-30 21:45:45
+ * @LastEditTime: 2021-09-30 22:10:56
  */
  
 use clap::{AppSettings, Clap};
@@ -17,7 +17,7 @@ use syntect::util::{LinesWithEndings, as_24_bit_terminal_escaped};
 
 /// A native httpie implementation with Rust, can you imagine how easy it is?
 #[derive(Clap ,Debug)]
-#[clap(version = "1.0", author = "Tyr Chen <tyr@chen.com>")]
+#[clap(version = "1.0", author = "stjimreal <stjimreal@gmail.com>")]
 #[clap(setting = AppSettings::ColoredHelp)]
 struct Opts{
     #[clap(subcommand)]

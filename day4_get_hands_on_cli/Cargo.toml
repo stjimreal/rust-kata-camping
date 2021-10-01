@@ -1,5 +1,5 @@
 [package]
-name = "day4_get_hands_on_cli"
+name = "httpre"
 version = "0.1.0"
 authors = ["JimReal <liulijng@bupt.edu.cn>"]
 edition = "2018"
