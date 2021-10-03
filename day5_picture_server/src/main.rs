@@ -1,12 +1,13 @@
 /*
  * @Date: 2021-09-30 22:28:50
  * @LastEditors: LIULIJING
- * @LastEditTime: 2021-10-02 03:13:09
+ * @LastEditTime: 2021-10-03 22:42:26
  */
 
 use anyhow::Result;
 use axum::{AddExtensionLayer, Router, extract::{Extension, Path}, handler::get, http::{HeaderMap, HeaderValue, StatusCode}};
 use bytes::Bytes;
+use image::ImageOutputFormat;
 use lru::LruCache;
 use percent_encoding::{percent_decode_str, percent_encode, NON_ALPHANUMERIC};
 use serde::Deserialize;
@@ -22,7 +23,9 @@ use tracing::{info, instrument};
 
 // 引入 protobuf 生成的代码，我们暂且不用太关心他们
 mod pb;
+mod engine;
 
+use engine::*;
 use pb::*;
 
 // 参数使用 serde 做 Deserialize, axum 会自动识别并解析
@@ -71,11 +74,19 @@ async fn generate(
         .map_err(|_| StatusCode::BAD_REQUEST)?;
 
     // TODO: 处理图片
+    // 使用 image engine 处理
+    let mut engine: Photon = data
+        .try_into()
+        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
+    engine.apply(&spec.specs);
 
+    let image = engine.generate(ImageOutputFormat::Jpeg(85));
+
+    info!("Finished processing: image size {}", image.len());
     let mut headers = HeaderMap::new();
 
     headers.insert("content-type", HeaderValue::from_static("image/jpeg"));
-    Ok((headers, data.to_vec()))
+    Ok((headers, image))
 }
 
 #[tokio::main]
@@ -98,8 +109,9 @@ async fn main() {
     let addr = "127.0.0.1:3000".parse().unwrap();
 
     print_test_url("https://images.pexels.com/photos/1562477/pexels-photo-1562477.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+    print_test_url("https://img.80ting.com/upload/4175/2020/12-21/20201221161902172895_small.jpg");
 
-    tracing::debug!("listening on {}", addr);
+    tracing::info!("listening on {}", addr);
     axum::Server::bind(&addr)
         .serve(app.into_make_service())
         .await

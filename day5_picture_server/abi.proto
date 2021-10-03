@@ -50,6 +50,10 @@ message Filter {
         OCEANIC = 1;
         ISLANDS = 2;
         MARINE  = 3;
+        VINTAGE = 4;
+        PERFUME = 5;
+        LIQUID  = 6;
+        SERENITY= 7;
         // more: https://docs.rs/photon-rs/0.3.1/photon_rs/filters/fn.filter.html
     }
     Filter filter = 1;
