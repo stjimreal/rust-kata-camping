@@ -75,8 +75,12 @@ pub mod filter {
         Unspecified = 0,
         Oceanic = 1,
         Islands = 2,
-        /// more: https://docs.rs/photon-rs/0.3.1/photon_rs/filters/fn.filter.html
         Marine = 3,
+        Vintage = 4,
+        Perfume = 5,
+        Liquid = 6,
+        /// more: https://docs.rs/photon-rs/0.3.1/photon_rs/filters/fn.filter.html
+        Serenity = 7,
     }
 }
 /// 处理水印
