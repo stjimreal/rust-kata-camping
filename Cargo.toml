@@ -5,6 +5,9 @@ members = [
     "day3_curl_rust",
     "day4_get_hands_on_cli",
     "day5_picture_server",
-    "day6_sql_query_tool"
+    "day6_sql_query_tool",
+    "day6_sql_pyo",
+    "day7_lifetime",
+    "day8_type_system"
 ]
 

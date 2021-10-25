@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["main",""]],"mod":[["arithmatic",""],["control_syntax",""],["data_structure",""]]});

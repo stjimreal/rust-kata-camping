@@ -1,12 +1,13 @@
 /*
  * @Date: 2021-10-03 23:18:29
  * @LastEditors: LIULIJING
- * @LastEditTime: 2021-10-08 18:09:46
+ * @LastEditTime: 2021-10-15 01:07:39
  */
 
 use anyhow::{anyhow, Result};
 use convert::Sql;
-use dialect::TyrDialect;
+pub use dialect::TyrDialect;
+pub use dialect::example_sql;
 use polars::prelude::*;
 use sqlparser::parser::Parser;
 use std::convert::TryInto;
@@ -37,6 +38,16 @@ impl Deref for DataSet {
 impl DerefMut for DataSet {
     fn deref_mut(&mut self) -> &mut Self::Target {
         &mut self.0
+    }
+}
+
+impl DataSet {
+    /// 从 DataSet 转换成 csv
+    pub fn to_csv(&self) -> Result<String>{
+        let mut buf = Vec::new();
+        let writer = CsvWriter::new(&mut buf);
+        writer.finish(self)?;
+        Ok(String::from_utf8(buf)?)
     }
 }
 

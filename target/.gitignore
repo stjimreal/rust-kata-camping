@@ -1,0 +1,5 @@
+debug/
+release/
+.rust*
+CACHEDIR.TAG
+.DS_Store*

@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["example_sql","测试辅助函数"],["query","从 from 中获取数据，从 where 中过滤，最后选取需要返回的列"]],"struct":[["DataSet",""],["TyrDialect",""]]});

@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["httpre"] = [{"text":"impl <a class=\"trait\" href=\"https://docs.rs/clap/3.0.0-beta.4/clap/derive/trait.Subcommand.html\" title=\"trait clap::derive::Subcommand\">Subcommand</a> for <a class=\"enum\" href=\"httpre/enum.SubCommand.html\" title=\"enum httpre::SubCommand\">SubCommand</a>","synthetic":false,"types":["httpre::SubCommand"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

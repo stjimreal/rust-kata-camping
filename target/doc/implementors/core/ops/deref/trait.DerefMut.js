@@ -1,0 +1,3 @@
+(function() {var implementors = {};
+implementors["queryer"] = [{"text":"impl <a class=\"trait\" href=\"https://doc.rust-lang.org/1.55.0/core/ops/deref/trait.DerefMut.html\" title=\"trait core::ops::deref::DerefMut\">DerefMut</a> for <a class=\"struct\" href=\"queryer/struct.DataSet.html\" title=\"struct queryer::DataSet\">DataSet</a>","synthetic":false,"types":["queryer::DataSet"]}];
+if (window.register_implementors) {window.register_implementors(implementors);} else {window.pending_implementors = implementors;}})()

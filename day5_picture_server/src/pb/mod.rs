@@ -1,7 +1,7 @@
 /*
  * @Date: 2021-10-01 01:27:34
  * @LastEditors: LIULIJING
- * @LastEditTime: 2021-10-01 12:24:50
+ * @LastEditTime: 2021-10-15 01:24:37
  */
 use base64::{decode_config, encode_config, URL_SAFE_NO_PAD};
 use photon_rs::transform::SamplingFilter;
@@ -43,6 +43,10 @@ impl filter::Filter {
             filter::Filter::Oceanic => Some("oceanic"),
             filter::Filter::Islands => Some("islands"),
             filter::Filter::Marine  => Some("marine"),
+            filter::Filter::Vintage => Some("vintage"),
+            filter::Filter::Perfume => Some("perfume"),
+            filter::Filter::Liquid => Some("liquid"),
+            filter::Filter::Serenity => Some("serenity"),
         }
     }
 }

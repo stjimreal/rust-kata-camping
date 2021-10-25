@@ -1,0 +1,1 @@
+window.ALL_CRATES = ["day3_curl_rust","day7_lifetime","day8_type_system","getting_started","httpre","queryer","queryer_py","thumbor"];
